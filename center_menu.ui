@@ -1,0 +1,2293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StackedWidget</class>
+ <widget class="QStackedWidget" name="StackedWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>975</width>
+    <height>557</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>StackedWidget</string>
+  </property>
+  <property name="currentIndex">
+   <number>4</number>
+  </property>
+  <widget class="QWidget" name="home_page"/>
+  <widget class="QWidget" name="gest_prod_page">
+   <property name="styleSheet">
+    <string notr="true">#gest_prod_page{background-color: rgba(255, 255, 255, 100);}
+#label_title_gestprod {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+#frame_contain_gest_p {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+#frame_add_prod {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#label_nom_prod,
+#label_catergeorie,
+#label_prix,
+#label_descr {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#nom_prod_le,
+#categorie_prod_le,
+#prix_prod_le,
+#textEdit {
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+#nom_prod_le:focus,
+#categorie_prod_le:focus,
+#prix_prod_le:focus,
+#textEdit:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+#bouton_modifier {
+    background-color: #ffc107; /* Couleur jaune */
+    border: 1px solid #ffc107; /* Bordure jaune */
+    color: #FFFFFF; /* Couleur du texte par défaut */
+    border-radius: 5px; /* Bords arrondis */
+    padding: 5px 10px; /* Espacement interne du bouton */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Police en gras */
+}
+
+#bouton_modifier:hover {
+    background-color: #e0a800; /* Couleur jaune foncée */
+    border: 1px solid #e0a800; /* Bordure jaune foncée */
+}
+
+#bouton_modifier:pressed {
+    background-color: #b58905; /* Couleur jaune foncée lorsque le bouton est enfoncé */
+    border: 1px solid #b58905; /* Bordure jaune foncée lorsque le bouton est enfoncé */
+}
+
+#bouton_ajouter {
+    background-color: #28a745; /* Couleur verte */
+    border: 1px solid #28a745; /* Bordure verte */
+    color: #FFFFFF; /* Couleur du texte par défaut */
+    border-radius: 5px; /* Bords arrondis */
+    padding: 5px 10px; /* Espacement interne du bouton */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Police en gras */
+}
+
+#bouton_ajouter:hover {
+    background-color: #218838; /* Couleur verte foncée */
+    border: 1px solid #218838; /* Bordure verte foncée */
+}
+
+#bouton_ajouter:pressed {
+    background-color: #1e7e34; /* Couleur verte foncée lorsque le bouton est enfoncé */
+    border: 1px solid #1e7e34; /* Bordure verte foncée lorsque le bouton est enfoncé */
+}
+
+</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+     <widget class="QLabel" name="label_title_gestprod">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Gestion des Produits</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_contain_gest_p">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QFrame" name="frame_9">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QFrame" name="frame_add_prod">
+            <property name="maximumSize">
+             <size>
+              <width>600</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="0" column="1">
+              <widget class="QLabel" name="label_nom_prod">
+               <property name="text">
+                <string>Nom du Produits :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="4">
+              <widget class="QLineEdit" name="categorie_prod_le">
+               <property name="minimumSize">
+                <size>
+                 <width>44</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>60</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="4">
+              <widget class="QTextEdit" name="textEdit"/>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLabel" name="label_catergeorie">
+               <property name="text">
+                <string>Categorie :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLabel" name="label_prix">
+               <property name="text">
+                <string>Prix :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="4">
+              <widget class="QPushButton" name="bouton_ajouter">
+               <property name="text">
+                <string>Ajouter</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="4">
+              <widget class="QLineEdit" name="prix_prod_le">
+               <property name="minimumSize">
+                <size>
+                 <width>44</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>60</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4">
+              <widget class="QLineEdit" name="nom_prod_le">
+               <property name="minimumSize">
+                <size>
+                 <width>44</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>60</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QLabel" name="label_descr">
+               <property name="text">
+                <string>Description :</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="2">
+              <widget class="QToolButton" name="toolButton">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="toolTip">
+                <string>&lt;b&gt;Photo&lt;b/&gt;</string>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bouton_modifier">
+            <property name="maximumSize">
+             <size>
+              <width>600</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Modifier</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_8">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="3" column="0">
+           <widget class="QTableWidget" name="stock_tab">
+            <property name="maximumSize">
+             <size>
+              <width>600</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">/* Style de la table sublime */
+            QTableWidget {
+                border: 1px solid #dee2e6;
+                border-collapse: collapse;
+                width: 100%;
+                font-size: 16px;
+            }
+
+            /* Style des cellules de la table sublime */
+            QTableWidget::item {
+                border: 1px solid #dee2e6;
+                padding: 10px;
+                text-align: center;
+                background-color: #f2f2f2;
+                color: #333;
+            }
+
+            /* Style de l'en-tête de la table sublime */
+            QTableWidget::item:selected {
+                background-color: #007bff;
+                color: #ffffff;
+            }
+
+            /* Style des lignes paires de la table sublime */
+            QTableWidget::item:alternate {
+                background-color: #e9ecef;
+            }
+
+            /* Style des lignes impaires de la table sublime */
+            QTableWidget::item:!alternate {
+                background-color: #ffffff;
+            }
+
+            /* Style des lignes au survol de la table sublime */
+            QTableWidget::item:hover {
+                background-color: #d4edda;
+            }
+
+            /* Style de l'en-tête de la table sublime */
+            QHeaderView::section {
+                background-color: #f8f9fa;
+                color: #212529;
+                padding: 3px;
+                border: 1px solid #dee2e6;
+                font: 700 11pt &quot;Segoe UI&quot;;
+            }
+
+            /* Style des barres de défilement de la table sublime */
+            QScrollBar:vertical, QScrollBar:horizontal {
+                background-color: #f8f9fa;
+                width: 8px;
+            }
+
+            QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
+                background-color: #007bff;
+                border-radius: 4px;
+            }
+
+            QScrollBar::add-line:vertical, QScrollBar::add-line:horizontal,
+            QScrollBar::sub-line:vertical, QScrollBar::sub-line:horizontal {
+                background: none;
+            }
+
+            QScrollBar::add-page:vertical, QScrollBar::add-page:horizontal,
+            QScrollBar::sub-page:vertical, QScrollBar::sub-page:horizontal {
+                background: none;
+            }</string>
+            </property>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>180</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>200</number>
+            </attribute>
+            <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderHighlightSections">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>produits</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Stock</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="2">
+           <widget class="QGroupBox" name="option_stockage">
+            <property name="maximumSize">
+             <size>
+              <width>549</width>
+              <height>110</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#option_stockage{
+background-color:#f1f1f1;
+border:1px solid #ccc;
+border-radius:12px;
+}
+/* Styliser le bouton &quot;Modifier&quot; */
+QPushButton#retirer_produit_btn {
+    background-color: #ffc107; /* Couleur jaune */
+    color: #FFFFFF; /* Couleur du texte par défaut */
+    border: 1px solid #ffc107; /* Bordure jaune */
+    border-radius: 5px; /* Bords arrondis */
+    padding: 8px 16px; /* Espacement interne */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Police en gras */
+}
+
+QPushButton#retirer_produit_btn:hover {
+    background-color: #e0a800; /* Couleur jaune foncée au survol */
+    border: 1px solid #e0a800; /* Bordure jaune foncée au survol */
+}
+
+QPushButton#retirer_produit_btn:pressed {
+    background-color: #b58905; /* Couleur jaune foncée lorsque le bouton est enfoncé */
+    border: 1px solid #b58905; /* Bordure jaune foncée lorsque le bouton est enfoncé */
+}
+/* Styliser le bouton &quot;Supprimer&quot; */
+QPushButton#supprimer_produit_btn {
+    background-color: #dc3545; /* Couleur rouge */
+    color: #FFFFFF; /* Couleur du texte par défaut */
+    border: 1px solid #dc3545; /* Bordure rouge */
+    border-radius: 5px; /* Bords arrondis */
+    padding: 8px 16px; /* Espacement interne */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Police en gras */
+}
+
+QPushButton#supprimer_produit_btn:hover {
+    background-color: #c82333; /* Couleur rouge foncée au survol */
+    border: 1px solid #c82333; /* Bordure rouge foncée au survol */
+}
+
+QPushButton#supprimer_produit_btn:pressed {
+    background-color: #b21f2d; /* Couleur rouge foncée lorsque le bouton est enfoncé */
+    border: 1px solid #b21f2d; /* Bordure rouge foncée lorsque le bouton est enfoncé */
+}
+/* Styliser le bouton &quot;Ajouter&quot; */
+QPushButton#ajouter_produit_btn {
+    background-color: #28a745; /* Couleur verte */
+    color: #FFFFFF; /* Couleur du texte par défaut */
+    border: 1px solid #28a745; /* Bordure verte */
+    border-radius: 5px; /* Bords arrondis */
+    padding: 8px 16px; /* Espacement interne */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Police en gras */
+}
+
+QPushButton#ajouter_produit_btn:hover {
+    background-color: #218838; /* Couleur verte foncée au survol */
+    border: 1px solid #218838; /* Bordure verte foncée au survol */
+}
+
+QPushButton#ajouter_produit_btn:pressed {
+    background-color: #1e7e34; /* Couleur verte foncée lorsque le bouton est enfoncé */
+    border: 1px solid #1e7e34; /* Bordure verte foncée lorsque le bouton est enfoncé */
+}
+
+
+</string>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="0" column="1">
+              <layout class="QHBoxLayout" name="layout_tool_btn">
+               <item>
+                <widget class="QPushButton" name="ajouter_produit_btn">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Ajouter au Stock&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string>Ajouter</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="retirer_produit_btn">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Retrancher du Stock&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string>Retirer</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="0" column="0">
+              <layout class="QHBoxLayout" name="layout_list">
+               <item>
+                <widget class="QComboBox" name="liste_prod_combo_box">
+                 <property name="minimumSize">
+                  <size>
+                   <width>250</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">/* Styliser le bouton déroulant du QComboBox */
+QComboBox {
+    background-color: #e9ecef; /* Couleur de fond */
+    color: #495057; /* Couleur du texte par défaut */
+    border: 1px solid #ced4da; /* Bordure */
+    border-radius: 8px; /* Bords arrondis */
+    padding: 8px; /* Espacement interne */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Police en gras */
+}
+
+QComboBox:hover {
+    background-color: #dee2e6; /* Couleur au survol */
+}
+
+QComboBox:pressed {
+    background-color: #ced4da; /* Couleur lorsque le bouton est enfoncé */
+}
+
+QComboBox::drop-down {
+    width: 25px; /* Largeur de la flèche du bouton déroulant */
+    border: none; /* Supprimer la bordure de la flèche */
+}
+
+QComboBox::down-arrow {
+    image: url(arrow_down.png); /* Remplacer &quot;arrow_down.png&quot; par le chemin vers votre image de flèche personnalisée */
+}
+
+/* Styliser la liste déroulante du QComboBox */
+QComboBox QAbstractItemView {
+    background-color: #e9ecef; /* Couleur de fond de la liste déroulante */
+    border: 1px solid #ced4da; /* Bordure de la liste déroulante */
+    border-radius: 8px; /* Bords arrondis */
+    padding: 8px; /* Espacement interne */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Police en gras */
+    min-width: 200px; /* Largeur minimale de la liste déroulante */
+}
+
+QComboBox QAbstractItemView::item {
+    height: 30px; /* Hauteur de chaque élément de la liste */
+    padding: 5px 15px; /* Espacement interne des éléments */
+	border-radius: 8px;
+}
+
+QComboBox QAbstractItemView::item:selected {
+    background-color: #007bff; /* Couleur bleue pour l'élément sélectionné */
+    color: #FFFFFF; /* Couleur du texte de l'élément sélectionné */
+}
+
+QComboBox QAbstractItemView::item:hover {
+    background-color: #ced4da; /* Couleur au survol */
+}
+</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>liste des produits</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="quantite_spin_box">
+                 <property name="maximumSize">
+                  <size>
+                   <width>73</width>
+                   <height>41</height>
+                  </size>
+                 </property>
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Quantité&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">/* Styliser le QSpinBox */
+QSpinBox {
+    background-color: #e9ecef; /* Couleur de fond */
+    color: #495057; /* Couleur du texte par défaut */
+    border: 1px solid #ced4da; /* Bordure */
+    border-radius: 8px; /* Bords arrondis */
+    padding: 8px; /* Espacement interne */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Police en gras */
+}
+
+QSpinBox:hover {
+    background-color: #dee2e6; /* Couleur au survol */
+}
+
+QSpinBox:pressed {
+    background-color: #ced4da; /* Couleur lorsque le bouton est enfoncé */
+}
+
+QSpinBox::up-button {
+    subcontrol-origin: border; /* Positionnement du bouton d'incrémentation */
+    subcontrol-position: top right; /* Positionnement du bouton d'incrémentation */
+    width: 30px; /* Largeur du bouton d'incrémentation */
+    border-left: none; /* Supprimer la bordure à gauche du bouton d'incrémentation */
+    border-top-right-radius: 8px; /* Bords arrondis à droite du bouton d'incrémentation */
+}
+
+QSpinBox::up-button:hover,
+QSpinBox::up-button:pressed {
+    background-color: #007bff; /* Couleur bleue pour le bouton d'incrémentation au survol et lorsque le bouton est enfoncé */
+    color: #FFFFFF; /* Couleur du texte du bouton d'incrémentation au survol et lorsque le bouton est enfoncé */
+}
+
+QSpinBox::down-button {
+    subcontrol-origin: border; /* Positionnement du bouton de décrémentation */
+    subcontrol-position: bottom right; /* Positionnement du bouton de décrémentation */
+    width: 30px; /* Largeur du bouton de décrémentation */
+    border-left: none; /* Supprimer la bordure à gauche du bouton de décrémentation */
+    border-bottom-right-radius: 8px; /* Bords arrondis à droite du bouton de décrémentation */
+}
+
+QSpinBox::down-button:hover,
+QSpinBox::down-button:pressed {
+    background-color: #dc3545; /* Couleur rouge pour le bouton de décrémentation au survol et lorsque le bouton est enfoncé */
+    color: #FFFFFF; /* Couleur du texte du bouton de décrémentation au survol et lorsque le bouton est enfoncé */
+}
+
+QSpinBox::up-arrow,
+QSpinBox::down-arrow {
+    image: url(arrow_up_down.png); /* Remplacer &quot;arrow_up_down.png&quot; par le chemin vers votre image d'icône d'incrémentation/décrémentation */
+    width: 20px; /* Largeur de l'icône d'incrémentation/décrémentation */
+    height: 20px; /* Hauteur de l'icône d'incrémentation/décrémentation */
+}
+</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="supprimer_produit_btn">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>250</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Supprimer définitivement le produit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>Supprimer le produit</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_9">
+            <property name="font">
+             <font>
+              <pointsize>18</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>STOCKAGE</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gest_client_page">
+   <layout class="QVBoxLayout" name="verticalLayout_6">
+    <item>
+     <widget class="QLabel" name="label_title_list_clients">
+      <property name="font">
+       <font>
+        <pointsize>33</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:30em
+</string>
+      </property>
+      <property name="text">
+       <string>Liste des clients</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_7">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">padding-left:50px;</string>
+         </property>
+         <property name="text">
+          <string>Nom</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_11">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">padding-left:130px;</string>
+         </property>
+         <property name="text">
+          <string>Email</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_12">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">padding-left:70px;</string>
+         </property>
+         <property name="text">
+          <string>Numero de telephone</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_13">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Action</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QScrollArea" name="scroll">
+      <property name="styleSheet">
+       <string notr="true">   
+            QScrollArea {
+                background-color: transparent;
+                border: none;
+            }
+table_info {
+                background-color: #fff;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin: 5px;
+            }
+            QPushButton {
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+            QPushButton:hover {
+                background-color: #0056b3;
+            }
+        ''')
+</string>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scroll_area_content">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>957</width>
+         <height>426</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="panier_page">
+   <property name="styleSheet">
+    <string notr="true">#panier_page{
+	
+	background-color: rgba(91, 224, 239, 22);
+	
+	background-image: url(:/icon/Resources/image/combio-removebg-preview.png);
+}</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QFrame" name="frame_head_panier">
+      <property name="minimumSize">
+       <size>
+        <width>231</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>231</width>
+        <height>73</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <widget class="QLabel" name="label_logo_panier_2">
+         <property name="minimumSize">
+          <size>
+           <width>51</width>
+           <height>71</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>71</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="resource.qrc">:/icon/Resources/image/shopping_cart_FILL0_wght400_GRAD0_opsz48.svg</pixmap>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_panier_ti_2">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>26</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgba(33, 33, 33, 210);</string>
+         </property>
+         <property name="text">
+          <string>Panier</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">
+
+    QFrame#frame_panier {
+        background-color: #f8f9fa; /* Couleur de fond */
+        border-radius: 8px; /* Bords arrondis */
+    }
+    QLabel#label_panier_nb {
+        color: #212529; /* Couleur du texte */
+    }
+    QFrame#frame_recap {
+        background-color: #f8f9fa; /* Couleur de fond */
+        border-radius: 8px; /* Bords arrondis */
+    }
+    QLabel#label_title_recap {
+        color: #212529; /* Couleur du texte */
+    }
+    QFrame#recap_facure_frame {
+        background-color: #f8f9fa; /* Couleur de fond */
+        border-radius: 8px; /* Bords arrondis */
+        border: 1px solid #dee2e6; /* Bordure */
+    }
+    QLabel#label_livraison_ti, QLabel#label_total_ti, QLabel#label_soustotal_ti {
+        color: rgba(41, 41, 41, 200); /* Couleur du texte */
+        padding-left: 12px; /* Espacement à gauche */
+        font-size: 17px; /* Taille de la police */
+        font-weight: bold; /* Police en gras */
+    }
+    QLabel#label_livraison, QLabel#label_total, QLabel#label_sous_total {
+        font-family: &quot;Sora ExtraLight&quot;; /* Police personnalisée */
+        font-size: 16px; /* Taille de la police */
+    }
+
+
+    QPushButton#passer_commande_btn {
+        background-color: #007bff; /* Couleur bleue */
+        color: #FFFFFF; /* Couleur du texte */
+        border-radius: 5px; /* Bords arrondis */
+        padding: 5px 10px; /* Espacement interne du bouton */
+        font-size: 14px; /* Taille de la police */
+        font-weight: bold; /* Police en gras */
+    }
+    QPushButton#passer_commande_btn:hover {
+        background-color: #0056b3; /* Couleur bleue foncée au survol */
+    }
+    QPushButton#passer_commande_btn:pressed {
+        background-color: #003974; /* Couleur bleue foncée lorsque le bouton est enfoncé */
+    }
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QFrame" name="frame_panier">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>475</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <widget class="QLabel" name="label_panier_nb">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>19</pointsize>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">padding-left:30px;</string>
+            </property>
+            <property name="text">
+             <string>Panier (0)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_line_cont">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>10</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="Layout_line">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>15</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>15</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QFrame" name="frame_line_2">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>10</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>10</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::HLine</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QScrollArea" name="panier_scroll">
+            <property name="styleSheet">
+             <string notr="true">border:none;
+background: transparent;</string>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="area_panier_wid">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>457</width>
+               <height>256</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_recap">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>330</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>500</width>
+           <height>340</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <property name="leftMargin">
+           <number>15</number>
+          </property>
+          <property name="topMargin">
+           <number>11</number>
+          </property>
+          <property name="rightMargin">
+           <number>15</number>
+          </property>
+          <property name="bottomMargin">
+           <number>11</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>11</number>
+          </property>
+          <item row="3" column="0" alignment="Qt::AlignHCenter">
+           <widget class="QPushButton" name="passer_commande_btn">
+            <property name="minimumSize">
+             <size>
+              <width>350</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>-1</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Passez la commande</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_title_recap">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Récapitulatif de la commande</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QFrame" name="recap_facure_frame">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>110</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>300</height>
+             </size>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_5">
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_livraison_ti">
+               <property name="font">
+                <font>
+                 <pointsize>-1</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgba(41, 41, 41, 200);padding-left:12px;</string>
+               </property>
+               <property name="text">
+                <string>Livraison :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_total_ti">
+               <property name="font">
+                <font>
+                 <pointsize>-1</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgba(41, 41, 41, 200);padding-left:12px;</string>
+               </property>
+               <property name="text">
+                <string>Total à payer :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLabel" name="label_livraison">
+               <property name="font">
+                <font>
+                 <family>Sora ExtraLight</family>
+                 <pointsize>-1</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>5f</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLabel" name="label_total">
+               <property name="font">
+                <font>
+                 <family>Sora ExtraLight</family>
+                 <pointsize>-1</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>0f</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLabel" name="label_sous_total">
+               <property name="font">
+                <font>
+                 <family>Sora ExtraLight</family>
+                 <pointsize>-1</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>0 f</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_soustotal_ti">
+               <property name="font">
+                <font>
+                 <pointsize>-1</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgba(41, 41, 41, 200);padding-left:12px;</string>
+               </property>
+               <property name="text">
+                <string>Sous-Total</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_3">
+      <property name="maximumSize">
+       <size>
+        <width>264</width>
+        <height>104</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <item>
+        <widget class="QLabel" name="label_info">
+         <property name="maximumSize">
+          <size>
+           <width>392</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <pointsize>14</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Nous acceptons</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_10">
+         <property name="minimumSize">
+          <size>
+           <width>262</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>262</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_11">
+          <item>
+           <widget class="QPushButton" name="paye_wave">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/icon/Resources/image/wave-senegal-mobile-money.png</normaloff>:/icon/Resources/image/wave-senegal-mobile-money.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>80</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="paye_orange_money">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/icon/Resources/image/OM_Logo.png</normaloff>:/icon/Resources/image/OM_Logo.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="paye_visa">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>120</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/icon/Resources/image/Visa_Inc._logo.svg.png</normaloff>:/icon/Resources/image/Visa_Inc._logo.svg.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="space_client_page">
+   <layout class="QVBoxLayout" name="verticalLayout_7">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size:33px;font-weight: bold;
+    margin-bottom: 5px;</string>
+      </property>
+      <property name="text">
+       <string>Espace Clients</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="sub_frame_space_client">
+      <property name="styleSheet">
+       <string notr="true">/* Style pour la frame */
+#frame_display_info,#frame_modif_info {
+    border: 1px solid rgba(108, 117, 125, 0.125); /* Couleur de bordure par défaut */
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour la frame au survol */
+#frame_display_info:hover,#frame_modif_info:hover {
+    border-color: var(--bs-secondary-color); /* Couleur de bordure au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les labels */
+.QLabel {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style pour les boutons */
+.QPushButton{
+    background-color: #6c757d;/* Couleur de bouton Bootstrap */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Style pour les boutons au survol */
+.QPushButton:hover{
+    background-color: #6c757d; /* Couleur de bouton plus foncée au survol */
+}
+
+/* Style pour les champs de texte */
+.QLineEdit {
+    border: 1px solid #ced4da; /* Couleur de bordure par défaut */
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+/* Style pour les champs de texte avec focus */
+.QLineEdit:focus {
+    border-color:  #6c757d;
+    outline: none;
+}
+/* Style pour l'état hover des boutons */
+.QPushButton:hover {
+    background-color: #5a6268; /* Nouvelle couleur de fond au survol */
+}
+
+/* Style pour l'état pressé (active) des boutons */
+.QPushButton:pressed {
+    background-color: #343a40; /* Nouvelle couleur de fond au clic */
+}
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_13">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QFrame" name="frame_display_info">
+           <property name="minimumSize">
+            <size>
+             <width>275</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_11">
+            <item>
+             <layout class="QGridLayout" name="gridLayout">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_ti_nom">
+                <property name="maximumSize">
+                 <size>
+                  <width>70</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Nom :</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_nom">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_ti_prenom">
+                <property name="maximumSize">
+                 <size>
+                  <width>70</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Prenom :</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLabel" name="label_prenom">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_ti_adresse">
+                <property name="maximumSize">
+                 <size>
+                  <width>70</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Adresse :</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLabel" name="label_adress">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_ti_contact">
+                <property name="maximumSize">
+                 <size>
+                  <width>70</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>contact :</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLabel" name="label_contact">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Modifier les Informations</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame_modif_info">
+           <property name="minimumSize">
+            <size>
+             <width>355</width>
+             <height>266</height>
+            </size>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <item>
+             <layout class="QGridLayout" name="gridLayout_7">
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_ti_adresse_2">
+                <property name="text">
+                 <string>Adresse :</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_ti_prenom_2">
+                <property name="text">
+                 <string>Prenom :</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_ti_nom_2">
+                <property name="text">
+                 <string>Nom :</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_ti_contact_2">
+                <property name="text">
+                 <string>contact :</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="modif_nom_le">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="modif_prenom_le">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="modif_adress_le">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="modif_contact_le">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_2">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>enregistrer les Informations</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>187</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="space_admin_page">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frame_lay_sa">
+      <property name="styleSheet">
+       <string notr="true">#frame_lay_sa{
+	
+	background-color: rgba(177, 173, 170, 35);
+}
+#space_admin_page {
+	background-color: rgb(255, 255, 255);
+    background-color: #f0f0f0;
+    padding: 50px;
+}
+
+#label_title {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#come_back_home {
+    background-color: transparent;
+    border: 2px solid #f18b0e;
+    color: #f18b0e;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#come_back_home:hover {
+    background-color: #f18b0e;
+    color: #fff;
+}
+
+#widget {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+#gest_prod_btn, #gest_client_btn, #gest_compt_admin_btn {
+    background-color: transparent;
+    border: 2px solid #f18b0e;
+    color: #f18b0e;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#gest_prod_btn:hover, #gest_client_btn:hover, #gest_compt_admin_btn:hover {
+    background-color: #f18b0e;
+    color: #fff;
+}
+
+#gest_prod_btn:pressed, #gest_client_btn:pressed, #gest_compt_admin_btn:pressed ,#come_back_home:pressed{
+    background-color: #d06e0c;
+    border-color: #d06e0c;
+}
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="leftMargin">
+        <number>150</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>110</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="frame_sa">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <layout class="QVBoxLayout" name="layout_contain">
+          <item alignment="Qt::AlignTop">
+           <widget class="QLabel" name="label_title">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Espace Administrateur</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="sub_frame_sa">
+            <layout class="QVBoxLayout" name="space_ad_layout">
+             <item>
+              <widget class="QPushButton" name="gest_prod_btn">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>60</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Gestion des Produits</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="gest_client_btn">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>60</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Gestion des Client</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="gest_compt_admin_btn">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>60</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Gesstion du compte Admin</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignTop">
+        <widget class="QFrame" name="frame_2">
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QPushButton" name="come_back_home">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Retour à l'accueil</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="modif_page">
+   <layout class="QVBoxLayout" name="verticalLayout_8">
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-weight: bold;
+    margin-bottom: 5px;
+font-size:30px;</string>
+      </property>
+      <property name="text">
+       <string>Modifier les informations du clients</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_4">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>281</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_15">
+         <item>
+          <widget class="QFrame" name="frame_modif_info_2">
+           <property name="minimumSize">
+            <size>
+             <width>355</width>
+             <height>266</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#frame_modif_info_2 {
+    border: 1px solid rgba(108, 117, 125, 0.125); /* Couleur de bordure par défaut */
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour la frame au survol */
+#frame_display_info:hover,#frame_modif_info:hover {
+    border-color: var(--bs-secondary-color); /* Couleur de bordure au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les labels */
+.QLabel {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style pour les boutons */
+.QPushButton{
+    background-color: #6c757d;/* Couleur de bouton Bootstrap */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Style pour les boutons au survol */
+.QPushButton:hover{
+    background-color: #6c757d; /* Couleur de bouton plus foncée au survol */
+}
+
+/* Style pour les champs de texte */
+.QLineEdit {
+    border: 1px solid #ced4da; /* Couleur de bordure par défaut */
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+/* Style pour les champs de texte avec focus */
+.QLineEdit:focus {
+    border-color:  #6c757d;
+    outline: none;
+}
+/* Style pour l'état hover des boutons */
+.QPushButton:hover {
+    background-color: #5a6268; /* Nouvelle couleur de fond au survol */
+}
+
+/* Style pour l'état pressé (active) des boutons */
+.QPushButton:pressed {
+    background-color: #343a40; /* Nouvelle couleur de fond au clic */
+}
+</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_14">
+            <item>
+             <layout class="QGridLayout" name="gridLayout_8">
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_ti_adresse_3">
+                <property name="text">
+                 <string>Adresse :</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_ti_prenom_3">
+                <property name="text">
+                 <string>Prenom :</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_ti_nom_3">
+                <property name="text">
+                 <string>Nom :</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_ti_contact_3">
+                <property name="text">
+                 <string>contact :</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="mo_nom_cl">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="mo_prenom_cl">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="mo_adresse_cl">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="mo_contact_cl">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_3">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>enregistrer les Informations</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>281</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

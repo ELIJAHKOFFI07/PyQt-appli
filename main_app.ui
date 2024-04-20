@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>945</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="drop_shadow_frame">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="drop_shadow_layout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="head_frame_menu">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>75</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#head_frame_menu{
+	background-color: rgb(255, 255, 255);
+border-radius:10px;
+}
+QPushButton{border:none}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="head_menu_layout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="logo_btn">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/img/Resources/image/photo_2023-08-04_13-32-33.jpg</normaloff>:/img/Resources/image/photo_2023-08-04_13-32-33.jpg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>150</width>
+              <height>95</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="toogle_menu">
+            <property name="minimumSize">
+             <size>
+              <width>70</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>60</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#toogle_menu:hover {
+    background-color: rgba(241, 139, 14, 50); /* Couleur de fond au survol */
+    border-radius: 8px;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/icon/Resources/feather/align-right.svg</normaloff>:/icon/Resources/feather/align-right.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>80</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>100</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_search_box">
+            <property name="maximumSize">
+             <size>
+              <width>400</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#frame_search_box {
+    border: 1px solid rgba(241, 139, 14, 155);
+    border-radius: 13px;
+}
+
+#seach_line {
+    background-color: rgba(0, 0, 0, 0); /* Fond transparent */
+    border: none; /* Pas de bordure */
+    padding: 8px; /* Espacement interne */
+    font-size: 14px;
+    color: #333; /* Couleur du texte */
+    width: 100%; /* Largeur de la zone de recherche */
+}
+
+#search_btn {
+    background-color: transparent; /* Fond transparent */
+    border: none; /* Pas de bordure */
+    padding: 0; /* Pas de rembourrage */
+    margin: 0; /* Pas de marge */
+}
+
+#search_btn:hover {
+    background-color: rgba(241, 139, 14, 50); /* Couleur de fond au survol */
+    border-radius: 8px;
+}
+</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="layout_seach_box">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>10</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLineEdit" name="seach_line">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>Rechercher</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="search_btn">
+               <property name="minimumSize">
+                <size>
+                 <width>45</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/img/Resources/image/search_FILL0_wght400_GRAD0_opsz40.svg</normaloff>:/img/Resources/image/search_FILL0_wght400_GRAD0_opsz40.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>40</width>
+                 <height>45</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>100</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QFrame" name="notifiy_frame">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>60</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">/*QFrame{  
+background-color: #c6e2ff;
+     border: 2px solid #fff;
+       border-radius: 25px;
+}*/
+#panier_btn{
+border:none;
+}
+#notifiy_frame:hover {
+    background-color: rgba(241, 139, 14, 50); /* Couleur de fond au survol */
+    border-radius: 22px;
+}
+</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QPushButton" name="panier_btn">
+               <property name="minimumSize">
+                <size>
+                 <width>45</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>45</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/img/Resources/image/shopping_cart_FILL0_wght400_GRAD0_opsz48.svg</normaloff>:/img/Resources/image/shopping_cart_FILL0_wght400_GRAD0_opsz48.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignRight|Qt::AlignTop">
+              <widget class="QLabel" name="label_number_notify_2">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>13</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>1</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_5">
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="user_btn">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/img/Resources/image/account_circle_FILL0_wght400_GRAD0_opsz48.svg</normaloff>:/img/Resources/image/account_circle_FILL0_wght400_GRAD0_opsz48.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>60</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_contain">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="contain">
+          <item>
+           <widget class="QFrame" name="frame_left_menu">
+            <property name="maximumSize">
+             <size>
+              <width>0</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+#frame_left_menu {
+    background-color: rgba(241, 139, 14, 50); /* Couleur de fond */
+    border-radius: 10px; /* Arrondi des coins */
+	image: url(:/img/Resources/image/combio-removebg-preview.png)
+}
+
+#accueil_btn, #commande_btn, #space_client_btn,#space_admin_btn {
+    background-color: transparent;
+    border: none;
+    color: #fff; /* Couleur du texte */
+    font-size: 16px;
+    padding: 10px 20px; /* Espacement interne (haut et bas, gauche et droite) */
+    text-align: left;
+    transition: background-color 0.2s, border-radius 0.2s;
+}
+
+#accueil_btn:hover, #commande_btn:hover, #space_client_btn:hover,#space_admin_btn:hover {
+    background-color: rgba(241, 139, 14, 50); /* Couleur de fond au survol */
+    border-radius: 8px;
+}
+
+#accueil_btn:pressed, #commande_btn:pressed, #space_client_btn:pressed,#space_admin_btn:pressed {
+    background-color: rgba(241, 139, 14, 100); /* Couleur de fond enfoncée */
+    border-radius: 5px; /* Bordure légèrement arrondie enfoncée */
+    color: #fff; /* Couleur du texte enfoncé */
+}
+
+</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="left_menu_layout">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <item>
+                <widget class="QPushButton" name="accueil_btn">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Accueil</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resource.qrc">
+                   <normaloff>:/white/Resources/feather_w/home.svg</normaloff>:/white/Resources/feather_w/home.svg</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>28</width>
+                   <height>28</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="commande_btn">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>commande</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resource.qrc">
+                   <normaloff>:/white/Resources/feather_w/shopping-cart.svg</normaloff>:/white/Resources/feather_w/shopping-cart.svg</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>28</width>
+                   <height>28</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="space_client_btn">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Espace Clients</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="resource.qrc">
+                   <normaloff>:/white/Resources/feather_w/user.svg</normaloff>:/white/Resources/feather_w/user.svg</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>28</width>
+                   <height>28</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>258</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="space_admin_btn">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>45</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Espace Administrateur</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/white/Resources/feather_w/layers.svg</normaloff>:/white/Resources/feather_w/layers.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>28</width>
+                 <height>28</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QStackedWidget" name="page">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QWidget" name="pagePage1"/>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
